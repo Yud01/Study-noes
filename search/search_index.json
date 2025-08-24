@@ -1,1 +1,1 @@
-{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"\ud83d\udcda Welcome","text":"<p>MkDocs + Material running on GitHub Pages.</p> <ul> <li>Computer Science notes</li> <li>Finance / IFRS notes</li> <li>Reading notes</li> </ul>"}]}
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"\ud83d\udcda Welcome","text":"<p>MkDocs + Material running on GitHub Pages.</p> <ul> <li>NLP note</li> </ul>"}]}
