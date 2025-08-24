@@ -346,6 +346,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      语言形式化与理解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-of-speech-tagging-pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      词性标注（Part-of-Speech Tagging, POS）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#named-entity-recognition-ner" class="md-nav__link">
     <span class="md-ellipsis">
       命名实体识别（Named Entity Recognition, NER）
@@ -535,6 +553,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      语言形式化与理解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-of-speech-tagging-pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      词性标注（Part-of-Speech Tagging, POS）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#named-entity-recognition-ner" class="md-nav__link">
     <span class="md-ellipsis">
       命名实体识别（Named Entity Recognition, NER）
@@ -691,17 +727,14 @@ type(sentences)
 print('There are ' + str(len(sentences)) + ' sentences')
 for i in range(len(sentences)):
     print(str(i+1) + &quot;: &quot; + sentences[i])
----
-
-## 语言形式化与理解
-思考如何把自然语言表达转换为具有明确语法结构和清晰语义意义的形式语言表达，让计算机能够理解人类语言，并用逻辑结构表达出来。
-
----
-
-## 词性标注（Part-of-Speech Tagging, POS）
-为每个词元（token）分配一个语法类别（词性）。这些词性反映了词在句子中的句法角色。
-```python
-tags_list = nltk.pos_tag_sents(tokens_list)
+</code></pre>
+<hr />
+<h2 id="_2">语言形式化与理解</h2>
+<p>思考如何把自然语言表达转换为具有明确语法结构和清晰语义意义的形式语言表达，让计算机能够理解人类语言，并用逻辑结构表达出来。</p>
+<hr />
+<h2 id="part-of-speech-tagging-pos">词性标注（Part-of-Speech Tagging, POS）</h2>
+<p>为每个词元（token）分配一个语法类别（词性）。这些词性反映了词在句子中的句法角色。</p>
+<pre><code class="language-python">tags_list = nltk.pos_tag_sents(tokens_list)
 </code></pre>
 <hr />
 <h2 id="named-entity-recognition-ner">命名实体识别（Named Entity Recognition, NER）</h2>
