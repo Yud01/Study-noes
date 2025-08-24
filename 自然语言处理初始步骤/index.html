@@ -1,0 +1,558 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>自然语言处理要点（整理为可直接复制的 Markdown） - Yudong's Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#markdown" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Yudong&#39;s Notes" class="md-header__button md-logo" aria-label="Yudong's Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yudong's Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              自然语言处理要点（整理为可直接复制的 Markdown）
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Yudong&#39;s Notes" class="md-nav__button md-logo" aria-label="Yudong's Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Yudong's Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#token-normalisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      词元规范化（Token Normalisation）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="词元规范化（Token Normalisation）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-stemming" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 词干提取（Stemming）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-lemmatisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 词形还原（Lemmatisation）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentence-splitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      句子切分（Sentence Splitting）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      语言形式化与理解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-of-speech-tagging-pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      词性标注（Part-of-Speech Tagging, POS）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#named-entity-recognition-ner" class="md-nav__link">
+    <span class="md-ellipsis">
+      命名实体识别（Named Entity Recognition, NER）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      句法分析（Parsing）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="句法分析（Parsing）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constituency-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      短语结构分析（Constituency Parsing）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependency-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      依存句法分析（Dependency Parsing）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantic-role-labelling-srl" class="md-nav__link">
+    <span class="md-ellipsis">
+      语义角色标注（Semantic Role Labelling, SRL）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discourse-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      篇章分析（Discourse Parsing）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#natural-language-inference-nli" class="md-nav__link">
+    <span class="md-ellipsis">
+      自然语言推理（Natural Language Inference, NLI）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relation-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      关系抽取（Relation Extraction）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coreference-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      共指消解（Coreference Resolution）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#word-sense-disambiguation-wsd" class="md-nav__link">
+    <span class="md-ellipsis">
+      词义消歧（Word Sense Disambiguation, WSD）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#language-modelling-lm" class="md-nav__link">
+    <span class="md-ellipsis">
+      语言建模（Language Modelling, LM）
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="markdown">自然语言处理要点（整理为可直接复制的 Markdown）</h1>
+<h2 id="token-normalisation">词元规范化（Token Normalisation）</h2>
+<p>将一个词元（token）转换为标准（规范）形式的过程，这样即使两个词表面不同，也可以被识别为相同的词。</p>
+<h3 id="1-stemming">1. 词干提取（Stemming）</h3>
+<p>通过截断词尾将单词简化为一个词干，通常基于规则。<br />
+- 例：<code>running</code>、<code>runner</code> → <code>run</code><br />
+- 局限：有时会不准确，例如将 <code>university</code> 错误地变成 <code>univers</code>。</p>
+<h3 id="2-lemmatisation">2. 词形还原（Lemmatisation）</h3>
+<p>使用词典和词性信息，将单词还原为其在语言中的基本形式。<br />
+- 例：<code>running</code> → <code>run</code>，<code>better</code> → <code>good</code><br />
+- 特点：比词干提取更准确，但计算开销更大。</p>
+<hr />
+<h2 id="sentence-splitting">句子切分（Sentence Splitting）</h2>
+<p>将连续文本切分为独立句子的任务。</p>
+<hr />
+<h2 id="_1">语言形式化与理解</h2>
+<p>思考如何把自然语言表达转换为具有明确语法结构和清晰语义意义的形式语言表达，让计算机能够理解人类语言，并用逻辑结构表达出来。</p>
+<hr />
+<h2 id="part-of-speech-tagging-pos">词性标注（Part-of-Speech Tagging, POS）</h2>
+<p>为每个词元（token）分配一个语法类别（词性）。这些词性反映了词在句子中的句法角色。</p>
+<hr />
+<h2 id="named-entity-recognition-ner">命名实体识别（Named Entity Recognition, NER）</h2>
+<p>从句子中识别出命名实体并对其进行分类。命名实体指具有专有名称的实体（如人名、地名、机构名、国家等）。该任务在许多下游任务中非常有用。</p>
+<hr />
+<h2 id="parsing">句法分析（Parsing）</h2>
+<p>从文本中抽取句子结构，使计算机理解词语之间的语法关系。</p>
+<h3 id="constituency-parsing">短语结构分析（Constituency Parsing）</h3>
+<p>把句子分成不同的短语结构（如名词短语 NP、动词短语 VP），用树状结构表示，各节点代表不同的短语类型。</p>
+<h3 id="dependency-parsing">依存句法分析（Dependency Parsing）</h3>
+<p>分析词语之间的依赖关系，确定哪个词依赖于哪个词。每个词都是节点，词与词之间用有向边连接，表示语法关系。</p>
+<blockquote>
+<p>对比：短语结构分析更关注整体的语法层级结构；依存句法分析更注重词语之间的一对一依赖关系。</p>
+</blockquote>
+<hr />
+<h2 id="semantic-role-labelling-srl">语义角色标注（Semantic Role Labelling, SRL）</h2>
+<p>识别句子中每个谓词对应的各个成分的语义角色，即对于句子中的动作或事件，找出是谁发起的、动作影响了谁、动作的目标是什么等。</p>
+<p><strong>例句</strong>
+Doris gave Cary the book
+- 谓词：<code>gave</code>（动作）
+- 角色：
+  - <code>Doris</code> → ARG0（AGENT，行为的发出者）
+  - <code>Cary</code> → ARG2（GOAL，动作的接收目标）
+  - <code>the book</code> → ARG1（THEME，动作直接作用的对象）</p>
+<hr />
+<h2 id="discourse-parsing">篇章分析（Discourse Parsing）</h2>
+<p>识别文档或句子之间的修辞结构，用树或图表示句子之间的逻辑与语义关系。</p>
+<p><strong>例句</strong>
+Kevin must be here
+His car is parked outside
+可识别为 <code>evidence</code>（证据）关系：第二句话是第一句话的证据。</p>
+<hr />
+<h2 id="natural-language-inference-nli">自然语言推理（Natural Language Inference, NLI）</h2>
+<p>判断一个前提句子与一个假设句子之间的逻辑关系：
+- <strong>entailment（蕴含）</strong>：前提句子可以推出假设句子<br />
+- <strong>contradiction（矛盾）</strong>：前提句子和假设句子相矛盾<br />
+- <strong>neutral（中立）</strong>：无明显关系，无法判断真假</p>
+<hr />
+<h2 id="relation-extraction">关系抽取（Relation Extraction）</h2>
+<p>从文本中识别并分类实体之间的语义关系。可用于发现新知识、增强已有知识图谱，并为问答系统、信息检索等任务提供支持。</p>
+<hr />
+<h2 id="coreference-resolution">共指消解（Coreference Resolution）</h2>
+<p>判断文本中两个或多个提及（mention）是否指的是同一个实体。提及是指文本中提到某个实体的词语或短语（如“他/她/这家公司/那辆车”等）。</p>
+<p><strong>例句</strong>
+The trucks shall treat the roads before they freeze
+句子中有两个潜在实体 <code>trucks</code> 和 <code>roads</code>，代词 <code>they</code> 实际上指代 <code>roads</code>，因为“冻结（freeze）”更合理地发生在道路上而非卡车上。这就是共指消解要解决的问题。</p>
+<hr />
+<h2 id="word-sense-disambiguation-wsd">词义消歧（Word Sense Disambiguation, WSD）</h2>
+<p>在上下文中为多义词选择正确含义。</p>
+<ul>
+<li>
+<p>金融机构<br />
+  例句：<code>The Commonwealth Bank of Australia</code><br />
+  这里 <code>bank</code> 指“银行”。</p>
+</li>
+<li>
+<p>河岸或水边斜坡<br />
+  例句：<code>The bank of the Murrumbidgee</code><br />
+  这里 <code>bank</code> 指“河岸/堤岸”。</p>
+</li>
+</ul>
+<hr />
+<h2 id="language-modelling-lm">语言建模（Language Modelling, LM）</h2>
+<p>构建模型来学习单词序列的概率分布：<br />
+- 给定一个完整句子，计算整个句子的联合概率；<br />
+- 给定一部分句子，预测下一个最可能出现的词。</p>
+<blockquote>
+<p>语言模型是自然语言处理的基础任务之一，几乎所有现代 NLP 技术都依赖语言建模。</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
