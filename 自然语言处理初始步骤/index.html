@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="..">
+      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -16,7 +18,7 @@
     
     
       
-        <title>自然语言处理要点（整理为可直接复制的 Markdown） - Yudong's Notes</title>
+        <title>自然语言处理初始步骤 - Yudong's Notes</title>
       
     
     
@@ -94,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              自然语言处理要点（整理为可直接复制的 Markdown）
+              自然语言处理初始步骤
             
           </span>
         </div>
@@ -201,6 +203,235 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    自然语言处理初始步骤
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    自然语言处理初始步骤
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#token-normalisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      词元规范化（Token Normalisation）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="词元规范化（Token Normalisation）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-stemming" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 词干提取（Stemming）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-lemmatisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 词形还原（Lemmatisation）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentence-splitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      句子切分（Sentence Splitting）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      语言形式化与理解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-of-speech-tagging-pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      词性标注（Part-of-Speech Tagging, POS）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#named-entity-recognition-ner" class="md-nav__link">
+    <span class="md-ellipsis">
+      命名实体识别（Named Entity Recognition, NER）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      句法分析（Parsing）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="句法分析（Parsing）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constituency-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      短语结构分析（Constituency Parsing）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependency-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      依存句法分析（Dependency Parsing）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantic-role-labelling-srl" class="md-nav__link">
+    <span class="md-ellipsis">
+      语义角色标注（Semantic Role Labelling, SRL）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discourse-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      篇章分析（Discourse Parsing）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#natural-language-inference-nli" class="md-nav__link">
+    <span class="md-ellipsis">
+      自然语言推理（Natural Language Inference, NLI）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relation-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      关系抽取（Relation Extraction）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coreference-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      共指消解（Coreference Resolution）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#word-sense-disambiguation-wsd" class="md-nav__link">
+    <span class="md-ellipsis">
+      词义消歧（Word Sense Disambiguation, WSD）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#language-modelling-lm" class="md-nav__link">
+    <span class="md-ellipsis">
+      语言建模（Language Modelling, LM）
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
