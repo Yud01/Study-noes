@@ -688,20 +688,20 @@
 <hr />
 <h2 id="1-mrrmean-reciprocal-rank">1) MRR（Mean Reciprocal Rank，平均倒数排名）</h2>
 <p><strong>用来衡量</strong>：对于每个查询，<strong>第一个相关文档</strong>在结果列表中的<strong>排名</strong>（越靠前越好）。</p>
-<p>记第 (i) 个查询的第一个相关文档排名为 (\mathrm{rank}<em>i)。<br />
+<p>记第 <span class="arithmatex">\(i\)</span> 个查询的第一个相关文档排名为 <span class="arithmatex">\(\mathrm{rank}_i\)</span>。<br />
 <strong>定义：</strong>
 $$
-\mathrm{MRR}=\frac{1}{|Q|}\sum</em>{i=1}^{|Q|}\frac{1}{\mathrm{rank}_i}
+\mathrm{MRR}=\frac{1}{|Q|}\sum_{i=1}^{|Q|}\frac{1}{\mathrm{rank}_i}
 $$
-<strong>解读</strong>：只关心“第一个相关文档”出现的位置；如果第一条就是相关，贡献为 1；如果在第 5 条才出现，贡献为 (1/5)。</p>
+<strong>解读</strong>：只关心“第一个相关文档”出现的位置；如果第一条就是相关，贡献为 1；如果在第 5 条才出现，贡献为 <span class="arithmatex">\(1/5\)</span>。</p>
 <blockquote>
 <p>注：只关心“第一个相关文档位置”的是 <strong>MRR</strong>，不是 MAP。</p>
 </blockquote>
 <hr />
 <h2 id="2-mapmean-average-precision">2) MAP（Mean Average Precision，平均平均准确率）</h2>
 <p><strong>用来衡量</strong>：对每个查询计算其<strong>平均准确率（AP）</strong>，再对所有查询取平均。MAP 同时关注“相关项的<strong>位置</strong>”与“相关项的<strong>完整性</strong>”。</p>
-<p>先约定：记 (P(k)) 表示 <strong>P@k</strong>（前 (k) 个结果的准确率）。<br />
-设查询 (q) 有 (R) 个相关文档，这些相关文档出现在排名位置集合 ({k_1,k_2,\dots,k_R})（从 1 开始）。</p>
+<p>先约定：记 <span class="arithmatex">\(P(k)\)</span> 表示 <strong>P@k</strong>（前 <span class="arithmatex">\(k\)</span> 个结果的准确率）。<br />
+设查询 <span class="arithmatex">\(q\)</span> 有 <span class="arithmatex">\(R\)</span> 个相关文档，这些相关文档出现在排名位置集合 <span class="arithmatex">\(\{k_1,k_2,\dots,k_R\}\)</span>（从 1 开始）。</p>
 <p><strong>该查询的 AP：</strong>
 $$
 \mathrm{AP}(q)=\frac{1}{R}\sum_{j=1}^{R} P(k_j)
@@ -712,19 +712,19 @@ $$
 $$</p>
 <hr />
 <h2 id="3-precisionkk">3) Precision@k（@k 准确率）</h2>
-<p><strong>定义</strong>：系统返回的<strong>前 (k)</strong> 个结果中，<strong>相关文档占比</strong>：
+<p><strong>定义</strong>：系统返回的<strong>前 <span class="arithmatex">\(k\)</span></strong> 个结果中，<strong>相关文档占比</strong>：
 $$
 \text{P@k}=\frac{\text{前 }k\text{ 个中相关文档的数量}}{k}
 $$</p>
-<p>例：前 5 个文档中有 3 个相关 → (\text{P@5}=\frac{3}{5}=0.6)。<br />
-常与 Recall@k 联合查看；@k 指标专注“前 (k) 条”的质量。</p>
+<p>例：前 5 个文档中有 3 个相关 → <span class="arithmatex">\(\text{P@5}=\frac{3}{5}=0.6\)</span>。<br />
+常与 Recall@k 联合查看；@k 指标专注“前 <span class="arithmatex">\(k\)</span> 条”的质量。</p>
 <hr />
 <h2 id="4-r-precision">4) R-Precision</h2>
-<p><strong>定义</strong>：设某查询共有 (R) 个相关文档，计算<strong>前 (R)</strong> 个结果的准确率：
+<p><strong>定义</strong>：设某查询共有 <span class="arithmatex">\(R\)</span> 个相关文档，计算<strong>前 <span class="arithmatex">\(R\)</span></strong> 个结果的准确率：
 $$
 \mathrm{R\text{-}Precision}=\frac{\text{前 }R\text{ 个返回结果中相关文档的数量}}{R}
 $$</p>
-<p>当不知道合理的 (k) 取值时，R-Precision 以“真实相关数”作为对齐窗口。</p>
+<p>当不知道合理的 <span class="arithmatex">\(k\)</span> 取值时，R-Precision 以“真实相关数”作为对齐窗口。</p>
 <hr />
 <h2 id="5-roc-rocauc">5) ROC 曲线与 ROC–AUC</h2>
 <p>当系统能为每个结果给出<strong>可阈值化的相关性分数</strong>时，可绘制 ROC：</p>
@@ -737,7 +737,7 @@ $$</p>
   $$</p>
 </li>
 <li>
-<p><strong>ROC-AUC</strong>：ROC 曲线下面积，([0,1]) 区间，越大越好。</p>
+<p><strong>ROC-AUC</strong>：ROC 曲线下面积，<span class="arithmatex">\([0,1]\)</span> 区间，越大越好。</p>
 </li>
 </ul>
 <table>
@@ -786,7 +786,7 @@ $$</p>
 <ul>
 <li>只关心第一个命中的位置：用 <strong>MRR</strong>。  </li>
 <li>同时关心所有相关文档的位置与覆盖：用 <strong>MAP</strong>。  </li>
-<li>关注 Top-k 质量：用 <strong>Precision@k / Recall@k</strong>；未知 (k) 可看 <strong>R-Precision</strong>。  </li>
+<li>关注 Top-k 质量：用 <strong>Precision@k / Recall@k</strong>；未知 <span class="arithmatex">\(k\)</span> 可看 <strong>R-Precision</strong>。  </li>
 <li>有等级分、关注整体排序质量：用 <strong>NDCG@k</strong>。  </li>
 <li>需要阈值化、看分类能力：<strong>ROC-AUC（或 PR-AUC）</strong>。</li>
 </ul>
@@ -842,6 +842,12 @@ $$</p>
     
     
       <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
