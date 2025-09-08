@@ -1,0 +1,848 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E5%88%9D%E5%A7%8B%E6%AD%A5%E9%AA%A4/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
+    
+    
+      
+        <title>信息检索问题 - Yudong's Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Yudong&#39;s Notes" class="md-header__button md-logo" aria-label="Yudong's Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yudong's Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              信息检索问题
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Yudong&#39;s Notes" class="md-nav__button md-logo" aria-label="Yudong's Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Yudong's Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    NLP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            NLP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E5%88%9D%E5%A7%8B%E6%AD%A5%E9%AA%A4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    自然语言处理概要
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    信息检索问题
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    信息检索问题
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、非线性扫描：关联矩阵
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、非线性扫描：关联矩阵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      稀疏矩阵与资源开销
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、检索效果指标
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inverted-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、倒排索引（Inverted Index）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、倒排索引（Inverted Index）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、倒排索引的构建过程
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、非线性扫描：关联矩阵
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、非线性扫描：关联矩阵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      稀疏矩阵与资源开销
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、检索效果指标
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inverted-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、倒排索引（Inverted Index）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、倒排索引（Inverted Index）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、倒排索引的构建过程
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">倒排索引与检索流程</h1>
+<h2 id="_2">一、问题</h2>
+<p>当我们想要检索一本书中是否包含某个单词、但是不包含另外一个单词，最简答的做法往往是直接从头到尾阅读这本书的全部内容，然后全部扫描确定。<br />
+这种线性扫描方法被称为 <strong>Grepping</strong>（Linux 上的 <code>grep</code> 也直接对应这一功能）。<br />
+对于一个文字不大的书籍这是可行的，但在现实大规模场景中往往不可用。</p>
+<hr />
+<h2 id="_3">二、非线性扫描：关联矩阵</h2>
+<ul>
+<li>建立一个<strong>关联矩阵</strong>：对每个单词建立向量表，记录这个单词在哪些章节/文档中出现。  </li>
+<li>用 <strong>1</strong> 表示出现，<strong>0</strong> 表示没有出现。  </li>
+<li>然后以<strong>布尔方式</strong>（与 / 或 / 非）操作这些向量。</li>
+</ul>
+<h3 id="_4">稀疏矩阵与资源开销</h3>
+<ul>
+<li>例如我们拥有 <strong>50 万个词汇</strong>，存在于 <strong>100 万个文档</strong>中 ⇒ <strong>5000 亿</strong>个元素。  </li>
+<li>由于每个文档只包含 <strong>1000 个单词</strong>，矩阵中 <strong>超过 99.8%</strong> 都是 <strong>0</strong>（极稀疏）。  </li>
+<li>在实际应用中用处很小，特别是机器学习中完全无法使用。</li>
+</ul>
+<hr />
+<h2 id="_5">三、检索效果指标</h2>
+<ol>
+<li><strong>准确率 Precision (P)</strong>：被检索到的文档是相关的 / 所有被检索到的文档。  </li>
+<li><strong>召回率 Recall</strong>：被检索到的文档是相关的 / 所有相关的文档。</li>
+</ol>
+<hr />
+<h2 id="inverted-index">四、倒排索引（Inverted Index）</h2>
+<p>现在回到刚才的例子，我们尝试进行优化——引出一个核心概念 <strong>倒排索引</strong>（Inverted Index）。<br />
+其中命名的时候“倒排”这个单词完全没有意义，不知道为什么这样写，但是大佬这样叫我们就这样用了。</p>
+<p><strong>基本思想：记录数据的两个部分</strong>
+1. <strong>存在的所有单词</strong> → 使用词汇表/字典记录。<br />
+2. <strong>Postings list</strong>：每个单词对应的文档编号 → 也就是每个次对应的文档编号列表（即这些词出现在哪些文档中）。</p>
+<h3 id="_6">示例</h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Documents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brutus</td>
+<td>Doc1, Doc2, Doc4</td>
+</tr>
+<tr>
+<td>Caesar</td>
+<td>Doc1, Doc2, Doc4, D5</td>
+</tr>
+<tr>
+<td>Calpurnia</td>
+<td>Doc2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>查询：</strong> <code>Brutus AND Caesar AND NOT Calpurnia</code><br />
+- 取交集 → <code>Doc1, Doc2, Doc4</code> ∩ <code>Doc1, Doc2, Doc4, D5</code> = <strong><code>Doc1, Doc2, Doc4</code></strong><br />
+- 再排除 Calpurnia 出现的 <strong>Doc2</strong> → <strong>最终结果：<code>Doc1, Doc4</code></strong></p>
+<blockquote>
+<p>看上去很简单，但如果直接用仍然是一个“垃圾方法”（当然能够进行一定优化）。</p>
+</blockquote>
+<hr />
+<h2 id="_7">五、倒排索引的构建过程</h2>
+<p>倒排索引是现代搜索引擎的核心结构。</p>
+<p>1) <strong>步骤 1：收集文档</strong><br />
+<code>Doc1: Friends, Romans, countrymen. So let it be with Caesar ...</code></p>
+<p>2) <strong>步骤 2：分词（Token）</strong><br />
+   将每篇文档转换为一个词条 Token。<br />
+<code>Tokens: Friends Romans countrymen So let it be with Caesar</code></p>
+<p>3) <strong>步骤 3：语言预处理（标准化）</strong><br />
+   使用之前讲解的方法对语言进行预处理，包括小写化、词干提取、去标点化，使词标准化。<br />
+<code>friend roman countryman so let it be with caesar</code></p>
+<p>4) <strong>步骤 4：构建倒排索引</strong><br />
+   从标准化的 Tokens 中建立倒排索引。
+<img alt="img_1.png" src="../picture/img_1.png" /></p>
+<h1 id="postingsdftfbow-idf">倒排索引：Postings、DF、TF、BOW 与 IDF</h1>
+<h2 id="postings-df">一、Postings 与 DF 基本概念</h2>
+<ul>
+<li><strong>Posting</strong> 标识其在哪些文档中出现过。  </li>
+<li>随后将 <strong>Posting</strong> 出现的<strong>次数</strong>进行统计，最终合并成为 <strong>一个倒排索引</strong>（Inverted Index）。</li>
+</ul>
+<h3 id="_8">示例表</h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Document Frequency</th>
+<th>Postings List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ambitious</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>be</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>brutus</td>
+<td>2</td>
+<td>1, 2</td>
+</tr>
+<tr>
+<td>caesar</td>
+<td>2</td>
+<td>1, 2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>DF（Document Frequency）</strong>：标识该词出现在多少<strong>不同</strong>的文档中。  </li>
+<li><strong>Posting</strong>：表示<strong>出现的文档</strong>是哪些。</li>
+</ul>
+<hr />
+<h2 id="tf">二、在倒排上的优化：引入词频（TF）</h2>
+<p>我们过去单纯统计<strong>哪些文档中出现过该词</strong>。现在我们加入<strong>某个词在某个文档出现的次数</strong>，记为：<br />
+- <strong>TF (Term Frequency)</strong>：<code>tf(t, d)</code></p>
+<p>在统计的时候，采用 <strong>Bag-of-Words（BOW）</strong> 方法：<strong>忽略顺序</strong>，只考虑词出现的<strong>次数</strong>。</p>
+<h3 id="bow">BOW 等价示例</h3>
+<ul>
+<li>“Mary is quicker than John”  </li>
+<li>“John is quicker than Mary”<br />
+在 <strong>BOW</strong> 模型中二者<strong>相同</strong>，因为它们的<strong>词频统计完全一致</strong>。</li>
+</ul>
+<hr />
+<h2 id="tf_1">三、基于词频（TF）的评分机制</h2>
+<p>将文档中<strong>出现的词的次数</strong>作为它在文档中的<strong>权重</strong>，据此对用户查询词与文档之间进行加权匹配并进行<strong>排序</strong>：</p>
+<pre><code>Score(d, q) = ∑ tf(t, d)
+</code></pre>
+<hr />
+<h2 id="_9">四、问题：高频词的干扰</h2>
+<p>仅靠 TF 会出现问题：诸如 <strong>a / the / is</strong> 等<strong>高频词</strong>几乎所有文档都出现，但它们<strong>区分度差</strong>，容易主导打分。</p>
+<hr />
+<h2 id="idf">五、引入 IDF（逆文档频率）</h2>
+<p>为降低常见词的重要性、提升稀有词的区分能力，我们引入：<br />
+- <strong>IDF (Inverse Document Frequency)</strong>：<strong>减弱</strong>出现频率过高的词的权重，<strong>提高</strong>稀有词的区分能力。</p>
+<blockquote>
+<p>（在实际系统中，常与 TF 结合为 <strong>TF‑IDF</strong> 用于排序。）
+<img alt="img_2.png" src="../picture/img_2.png" />
+这样我们直接让一些很少出现的词汇的idf变的非常大
+最后我们将tf 和idf结合 生成 tf-idf 这样我们就能够在输入的时候考量 一个词在某篇文档出现来很多次 TF高 且这个词在语料库很少见 IDF高</p>
+</blockquote>
+<p><img alt="img_3.png" src="../picture/img_3.png" /></p>
+<p><img alt="img.png" src="../picture/img.png" /></p>
+<p><img alt="img.png" src="../picture/img4.png" /></p>
+<h1 id="map-mrr-precisionk-r-precision-rocauc-ndcg">排序导向指标：MAP / MRR / Precision@k / R-Precision / ROC–AUC / NDCG</h1>
+<p>先前的精准率（Precision）与召回率（Recall）更像<strong>集合级</strong>指标：关心“结果集合是否包含正确答案”。<br />
+实际搜索引擎返回的是<strong>有顺序的列表</strong>（如 Top-10），用户更在意“前几条是否相关”。因此需要<strong>排序导向</strong>的评估指标。</p>
+<hr />
+<h2 id="1-mrrmean-reciprocal-rank">1) MRR（Mean Reciprocal Rank，平均倒数排名）</h2>
+<p><strong>用来衡量</strong>：对于每个查询，<strong>第一个相关文档</strong>在结果列表中的<strong>排名</strong>（越靠前越好）。</p>
+<p>记第 (i) 个查询的第一个相关文档排名为 (\mathrm{rank}<em>i)。<br />
+<strong>定义：</strong>
+$$
+\mathrm{MRR}=\frac{1}{|Q|}\sum</em>{i=1}^{|Q|}\frac{1}{\mathrm{rank}_i}
+$$
+<strong>解读</strong>：只关心“第一个相关文档”出现的位置；如果第一条就是相关，贡献为 1；如果在第 5 条才出现，贡献为 (1/5)。</p>
+<blockquote>
+<p>注：只关心“第一个相关文档位置”的是 <strong>MRR</strong>，不是 MAP。</p>
+</blockquote>
+<hr />
+<h2 id="2-mapmean-average-precision">2) MAP（Mean Average Precision，平均平均准确率）</h2>
+<p><strong>用来衡量</strong>：对每个查询计算其<strong>平均准确率（AP）</strong>，再对所有查询取平均。MAP 同时关注“相关项的<strong>位置</strong>”与“相关项的<strong>完整性</strong>”。</p>
+<p>先约定：记 (P(k)) 表示 <strong>P@k</strong>（前 (k) 个结果的准确率）。<br />
+设查询 (q) 有 (R) 个相关文档，这些相关文档出现在排名位置集合 ({k_1,k_2,\dots,k_R})（从 1 开始）。</p>
+<p><strong>该查询的 AP：</strong>
+$$
+\mathrm{AP}(q)=\frac{1}{R}\sum_{j=1}^{R} P(k_j)
+$$</p>
+<p><strong>MAP：</strong>
+$$
+\mathrm{MAP}=\frac{1}{|Q|}\sum_{i=1}^{|Q|}\mathrm{AP}(q_i)
+$$</p>
+<hr />
+<h2 id="3-precisionkk">3) Precision@k（@k 准确率）</h2>
+<p><strong>定义</strong>：系统返回的<strong>前 (k)</strong> 个结果中，<strong>相关文档占比</strong>：
+$$
+\text{P@k}=\frac{\text{前 }k\text{ 个中相关文档的数量}}{k}
+$$</p>
+<p>例：前 5 个文档中有 3 个相关 → (\text{P@5}=\frac{3}{5}=0.6)。<br />
+常与 Recall@k 联合查看；@k 指标专注“前 (k) 条”的质量。</p>
+<hr />
+<h2 id="4-r-precision">4) R-Precision</h2>
+<p><strong>定义</strong>：设某查询共有 (R) 个相关文档，计算<strong>前 (R)</strong> 个结果的准确率：
+$$
+\mathrm{R\text{-}Precision}=\frac{\text{前 }R\text{ 个返回结果中相关文档的数量}}{R}
+$$</p>
+<p>当不知道合理的 (k) 取值时，R-Precision 以“真实相关数”作为对齐窗口。</p>
+<hr />
+<h2 id="5-roc-rocauc">5) ROC 曲线与 ROC–AUC</h2>
+<p>当系统能为每个结果给出<strong>可阈值化的相关性分数</strong>时，可绘制 ROC：</p>
+<ul>
+<li>
+<p><strong>ROC 曲线</strong>：横轴 <strong>FPR</strong>（假阳性率），纵轴 <strong>TPR</strong>（真正例率、召回率）。
+  $$
+  \text{TPR}=\frac{\text{True Positives}}{\text{All Positives}},\qquad
+  \text{FPR}=\frac{\text{False Positives}}{\text{All Negatives}}
+  $$</p>
+</li>
+<li>
+<p><strong>ROC-AUC</strong>：ROC 曲线下面积，([0,1]) 区间，越大越好。</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">AUC 值</th>
+<th>性能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0.5</td>
+<td>随机猜测</td>
+</tr>
+<tr>
+<td style="text-align: center;">0.7–0.8</td>
+<td>一般</td>
+</tr>
+<tr>
+<td style="text-align: center;">0.9+</td>
+<td>非常好</td>
+</tr>
+<tr>
+<td style="text-align: center;">1.0</td>
+<td>完美分类器</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>在排序评估中，类别极不平衡时更常用 <strong>PR-AUC</strong>（精准率–召回率曲线下面积）。</p>
+</blockquote>
+<hr />
+<h2 id="6-ndcgnormalized-discounted-cumulative-gain">6) NDCG（Normalized Discounted Cumulative Gain）</h2>
+<p><strong>用于有“等级相关性”的场景</strong>（如推荐系统、多等级打分的检索）。</p>
+<p><strong>DCG@k（常见形式之一）：</strong>
+$$
+\mathrm{DCG}<em>k=rel_1+\sum</em>{i=2}^{k}\frac{rel_i}{\log_2(i+1)}
+$$</p>
+<p><strong>NDCG@k：</strong>
+$$
+\mathrm{NDCG}_k=\frac{\mathrm{DCG}_k}{\mathrm{IDCG}_k}
+$$</p>
+<p>直觉：把高相关的结果放<strong>更靠前</strong>更有价值（折扣因子）；NDCG 归一化后便于不同查询/列表长度间比较。</p>
+<hr />
+<h2 id="_10">小结与选型建议</h2>
+<ul>
+<li>只关心第一个命中的位置：用 <strong>MRR</strong>。  </li>
+<li>同时关心所有相关文档的位置与覆盖：用 <strong>MAP</strong>。  </li>
+<li>关注 Top-k 质量：用 <strong>Precision@k / Recall@k</strong>；未知 (k) 可看 <strong>R-Precision</strong>。  </li>
+<li>有等级分、关注整体排序质量：用 <strong>NDCG@k</strong>。  </li>
+<li>需要阈值化、看分类能力：<strong>ROC-AUC（或 PR-AUC）</strong>。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
