@@ -5,8 +5,6 @@ plugins:
   - search
 nav:
   - Home: index.md
-nav:
-  - Home: index.md
   - NLP:
-      - "自然语言处理概要": 自然语言处理初始步骤.md
-      - "信息检索问题": 信息检索问题.md
+      - 自然语言处理概要: 自然语言处理初始步骤.md
+      - 信息检索问题: 信息检索问题.md
