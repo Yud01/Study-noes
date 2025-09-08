@@ -1,0 +1,757 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2%E9%97%AE%E9%A2%98/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
+    
+    
+      
+        <title>文章分类 - Yudong's Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bayesian-inference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Yudong&#39;s Notes" class="md-header__button md-logo" aria-label="Yudong's Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yudong's Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              文章分类
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Yudong&#39;s Notes" class="md-nav__button md-logo" aria-label="Yudong's Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Yudong's Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    NLP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            NLP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E5%88%9D%E5%A7%8B%E6%AD%A5%E9%AA%A4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    自然语言处理概要
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    信息检索问题
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    文章分类
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    文章分类
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      训练朴素贝叶斯分类器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="训练朴素贝叶斯分类器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      先验 \(P(c)\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pf_i-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      似然 P(f_i | c)（词袋视角）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      零概率问题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      拉普拉斯（加一）平滑
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown-wordstop-words" class="md-nav__link">
+    <span class="md-ellipsis">
+      未登录词（unknown word）与停用词（stop words）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      训练朴素贝叶斯分类器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="训练朴素贝叶斯分类器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      先验 \(P(c)\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pf_i-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      似然 P(f_i | c)（词袋视角）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      零概率问题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      拉普拉斯（加一）平滑
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown-wordstop-words" class="md-nav__link">
+    <span class="md-ellipsis">
+      未登录词（unknown word）与停用词（stop words）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="bayesian-inference">贝叶斯推断（Bayesian inference）</h1>
+<p><strong>朴素贝叶斯</strong>是一种<strong>概率分类器</strong>，当我们对某个文档 <span class="arithmatex">\(d\)</span> 进行分类，在所有类别集合 C 中，分类器返回的类别 c hat 是在<strong>后验概率</strong>下最可能的类别。<br />
+这里，c hat 上的“帽子”表示我们估计的“正确”类别，符号 <strong>argmax</strong> 表示使得目标函数取最大值的参数（本式中即类别 <span class="arithmatex">\(c\)</span>）：</p>
+<p>$$
+\hat{c}=\arg\max_{c\in\mathcal{C}} P(c\mid d) \tag{4.1}
+$$
+这种<strong>贝叶斯推断</strong>的思想最早由 <strong>Bayes (1763)</strong> 提出，之后被 <strong>Mosteller &amp; Wallace (1964)</strong> 成功应用于文本分类的研究。</p>
+<hr />
+<p>贝叶斯分类的核心思想是利用<strong>贝叶斯定理</strong>把式 (4.1) 中的条件概率P (c | d)转换成更便于计算的形式。贝叶斯定理的一般形式为，将任意条件概率P (x | y) 分解为另外三个概率：</p>
+<div class="arithmatex">\[
+P(x\mid y)=\frac{P(y\mid x)\,P(x)}{P(y)} \tag{4.2}
+\]</div>
+<hr />
+<p>在本节我们介绍<strong>多项式朴素贝叶斯分类器</strong>（<em>Multinomial Naive Bayes Classifier</em>）。它是贝叶斯学习中一种基本、经典的“朴素”分类器，之所以称为“朴素”，是因为它对<strong>特征之间的依赖关系做了简化假设</strong>（即<strong>条件独立</strong>假设）。</p>
+<hr />
+<p>将式 (4.2) 代入式 (4.1)，得到：</p>
+<div class="arithmatex">\[
+\hat{c}
+=\arg\max_{c\in\mathcal{C}} P(c\mid d)
+=\arg\max_{c\in\mathcal{C}} \frac{P(d\mid c)\,P(c)}{P(d)} \tag{4.3}
+\]</div>
+<p>由于我们进行的是<strong>取最大值</strong>运算，且对于每一个可能的类别 <span class="arithmatex">\(c\)</span> 来说，分母 <span class="arithmatex">\(P(d)\)</span> 与 <span class="arithmatex">\(c\)</span> <strong>无关</strong>（对同一个文档 <span class="arithmatex">\(d\)</span> 是常数），因此可以在比较时<strong>忽略</strong>它，于是得到常用的等价形式：</p>
+<div class="arithmatex">\[
+\hat{c}
+=\arg\max_{c\in\mathcal{C}} P(d\mid c)\,P(c) \tag{4.4}
+\]</div>
+<hr />
+<p>我们把朴素贝叶斯称作一种<strong>生成式（generative）模型</strong>。从式 (4.4) 可以读出这样一种隐含假设：
+先从 P(c)中抽取一个类别 <span class="arithmatex">\(c\)</span>，再根据 P(d | c) 为该类别<strong>生成</strong>文档（或至少生成该文档的词计数）。
+从这个过程的角度出发，我们甚至可以想象生成“人工文档”。</p>
+<p>回到<strong>分类</strong>任务：给定某个文档 <span class="arithmatex">\(d\)</span>，我们选择使<strong>先验概率</strong> <span class="arithmatex">\(P(c)\)</span> 与<strong>似然</strong> P(d | c)的<strong>乘积</strong>最大的类别 c hat：</p>
+<div class="arithmatex">\[
+\hat{c}=\arg\max_{c\in\mathcal{C}} P(d\mid c)\, \widehat{P}(c) \tag{4.5}
+\]</div>
+<blockquote>
+<p>术语提示：<br />
+- <em>prior probability</em>（先验）<span class="arithmatex">\(P(c)\)</span><br />
+- <em>likelihood</em>（似然）P(d|c)</p>
+</blockquote>
+<p>为不失一般性，我们也可以把文档 <span class="arithmatex">\(d\)</span> 表示为一组特征 f1 f2 f3 ...。此时对应的判别式写为：</p>
+<div class="arithmatex">\[
+\hat{c}=\arg\max_{c\in\mathcal{C}} P(f_1,f_2,\ldots,f_n\mid c)\, \widehat{P}(c) \tag{4.6}
+\]</div>
+<p>然而，直接计算式 (4.6) 往往仍然非常困难：若不作任何简化，要估计“<strong>每一种可能的特征组合</strong>”（例如所有可能的词及其位置组合）的概率将需要巨量的参数，并导致无法接受的训练样本规模。因此，朴素贝叶斯采用两个<strong>简化假设</strong>：</p>
+<ol>
+<li><strong>词袋（bag‑of‑words）假设</strong>：词在文档中的<strong>位置不重要</strong>，比如单词 <em>love</em> 出现在第 1 个、第 20 个或最后一个位置，对分类的影响视为相同。于是我们让特征 (f_1,...) <strong>仅编码词的身份</strong>，而不编码位置信息。  </li>
+<li><strong>朴素贝叶斯假设（条件独立）</strong>：给定类别 c 时，各特征 P(f_i|c)<strong>相互独立</strong>，因此可以“朴素地”把联合概率拆成乘积：</li>
+</ol>
+<div class="arithmatex">\[
+P(f_1,f_2,\ldots,f_n\mid c)\;=\;P(f_1\mid c)\cdot P(f_2\mid c)\cdot \ldots \cdot P(f_n\mid c) \tag{4.7}
+\]</div>
+<p>基于以上两点，朴素贝叶斯分类器选择的最终类别公式为：</p>
+<div class="arithmatex">\[
+c_{\mathrm{NB}} \;=\; \arg\max_{c\in\mathcal{C}} P(c)\,\prod_{f\in F} P(f\mid c) \tag{4.8}
+\]</div>
+<p>其中 <span class="arithmatex">\(F\)</span> 为文档的特征集合（在词袋模型中，可理解为文档中出现的词/词频等特征）。</p>
+<p>4.2 朴素贝叶斯（对数空间与线性分类器；参数学习）</p>
+<p>通过在<strong>对数空间</strong>考虑特征，式 (4.10) 可以把预测类别写成输入特征的<strong>线性函数</strong>。<br />
+凡是用<strong>输入的线性组合</strong>来做分类决策的模型——比如朴素贝叶斯和逻辑回归——都称为<strong>线性分类器</strong>。</p>
+<blockquote>
+<p>注：除非特别说明，本文中的 <code>log</code> 指<strong>自然对数</strong> <span class="arithmatex">\(\ln\)</span>。</p>
+</blockquote>
+<hr />
+<h2 id="_1">训练朴素贝叶斯分类器</h2>
+<p>我们如何学习 P(c)与 P(f_i | c)呢？先看<strong>极大似然估计（MLE）</strong>：直接用训练数据中的频率。</p>
+<h3 id="pc">先验 <span class="arithmatex">\(P(c)\)</span></h3>
+<p>令 N_c 为训练集中属于类别 <span class="arithmatex">\(c\)</span> 的文档数，(N_doc) 
+为训练集的<strong>总</strong>文档数，则
+$$
+\widehat{P}(c)=\frac{N_c}{N_{\text{doc}}}\tag{4.11}
+$$</p>
+<h3 id="pf_i-c">似然 P(f_i | c)（词袋视角）</h3>
+<p>把<strong>特征</strong>视为“文档的词袋中某个词是否出现（或出现次数）”。于是我们要估计 P(w_i | c)。做法：把<strong>所有</strong>类别为 c 的训练文档<strong>拼接</strong>成一个“大文档”，用其中词w_i的<strong>频率</strong>做极大似然估计：
+$$
+\widehat{P}(w_i\mid c)=\frac{\operatorname{count}(w_i,c)}{\sum_{w\in V}\operatorname{count}(w,c)}\tag{4.12}
+$$
+其中词表 <span class="arithmatex">\(V\)</span> 是<strong>所有类别的词型并集</strong>，而不是仅类别 <span class="arithmatex">\(c\)</span> 中出现的词。</p>
+<h3 id="_2">零概率问题</h3>
+<p>设想要估计在<strong>正向</strong>类别下词 “fantastic” 的概率，但训练集中<strong>没有</strong>任何“既包含 <em>fantastic</em> 且被标为正向”的文档（也许 <em>fantastic</em> 在负向里以讽刺方式出现）。这时该特征的极大似然概率为 0：
+$$
+\widehat{P}(\text{<code>fantastic''}\mid \text{positive})
+=\frac{\operatorname{count}(\text{</code>fantastic''},\text{positive})}{\sum_{w\in V}\operatorname{count}(w,\text{positive})}
+=0\tag{4.13}
+$$</p>
+<p>而朴素贝叶斯会把<strong>所有特征的似然相乘</strong>，因此只要某一特征在某一类别下概率为 0，那个类别的整体概率就被置 0，不管其它证据如何。</p>
+<h3 id="_3">拉普拉斯（加一）平滑</h3>
+<p>最简单的解决方案是<strong>加一平滑（Laplace smoothing）</strong>。虽然在语言建模中常用更复杂的平滑，但在朴素贝叶斯文本分类中，加一平滑十分常见：
+$$
+\widehat{P}(w_i\mid c)
+=\frac{\operatorname{count}(w_i,c)+1}{\sum_{w\in V}\big(\operatorname{count}(w,c)+1\big)}
+=\frac{\operatorname{count}(w_i,c)+1}{\sum_{w\in V}\operatorname{count}(w,c)+|V|}\tag{4.14}
+$$</p>
+<blockquote>
+<p>count (wi , c) 把训练集中所有属于c类别的文档拼成一个大文档后 词wi出现的次数 - &gt; 防止一些0的数值出现 导致最后使用native 贝叶斯的时候出现0的情况</p>
+</blockquote>
+<h3 id="unknown-wordstop-words">未登录词（unknown word）与停用词（stop words）</h3>
+<ul>
+<li><strong>测试集出现但训练词表没有</strong>的词（未登录词）：做法是<strong>忽略</strong>它们——从测试文档中删除，对概率计算不作贡献。  </li>
+<li><strong>停用词</strong>（如 <em>the, a</em> 等高频词）：有些系统会把训练集中<strong>最频繁的前 10–100 个词</strong>或网上的停用词表作为停用词，并在训练与测试阶段都直接<strong>丢弃</strong>。但在多数文本分类任务中，使用停用词表<strong>并不会带来性能提升</strong>，更常见的做法是<strong>使用完整词表</strong>而不额外去除停用词。</li>
+</ul>
+<h1 id="addone">朴素贝叶斯：加一平滑（add‑one）训练与测试示例</h1>
+<p>我们在<strong>情感分析</strong>场景中演示朴素贝叶斯（两类：正向 <code>+</code> 与负向 <code>−</code>），并使用<strong>加一平滑</strong>。</p>
+<h2 id="_4">数据</h2>
+<p><strong>训练集</strong>（简化自影评）：</p>
+<ul>
+<li><code>−</code> : <em>just plain boring</em>  </li>
+<li><code>−</code> : <em>entirely predictable and lacks energy</em>  </li>
+<li><code>−</code> : <em>no surprises and very few laughs</em>  </li>
+<li><code>+</code> : <em>very powerful</em>  </li>
+<li><code>+</code> : <em>the most fun film of the summer</em>  </li>
+</ul>
+<p><strong>测试句子</strong>：<br />
+<code>?</code> : <em>predictable with no fun</em></p>
+<p>其中单词 <strong>with</strong> 在训练集中<strong>未出现</strong>（未登录词），故在朴素贝叶斯中<strong>直接丢弃</strong>，测试句子视为：<br />
+<em>S = “predictable no fun”</em>。</p>
+<hr />
+<h2 id="pc_1">先验概率 <span class="arithmatex">\(P(c)\)</span></h2>
+<p>由式 (4.11)，用文档频率估计：
+- 训练集中正向文档数 <span class="arithmatex">\(N_{+}=2\)</span>，负向 <span class="arithmatex">\(N_{-}=3\)</span>，总文档数 <span class="arithmatex">\(N_{\text{doc}}=5\)</span><br />
+$$
+\widehat{P}(+)=\frac{2}{5},\qquad \widehat{P}(-)=\frac{3}{5}.
+$$</p>
+<hr />
+<h2 id="pw-c-414">条件概率 P(w | c)（加一平滑，式 4.14）</h2>
+<p>把同一类别下的训练文档<strong>拼接</strong>为一个“大文档”。记：<br />
+- ==负向大文档的总词数 <span class="arithmatex">\(N_{-}=14\)</span>，正向大文档的总词数 <span class="arithmatex">\(N_{+}=9\)</span>==<br />
+- ==词表大小 <span class="arithmatex">\(|V|=20\)</span>（所有类别词型的<strong>并集</strong>）==</p>
+<p>对测试中涉及的三词 <em>predictable</em>、<em>no</em>、<em>fun</em>，按式 (4.14)：
+$$
+\widehat{P}(w_i\mid c)=\frac{\operatorname{count}(w_i,c)+1}{N_c+|V|}.
+$$</p>
+<p><strong>负向（−）</strong>：
+$$
+\begin{aligned}
+\widehat{P}(\text{predictable}\mid -)&amp;=\frac{1+1}{14+20},\
+\widehat{P}(\text{no}\mid -)&amp;=\frac{1+1}{14+20},\
+\widehat{P}(\text{fun}\mid -)&amp;=\frac{0+1}{14+20}.
+\end{aligned}
+$$</p>
+<p><strong>正向（+）</strong>：
+$$
+\begin{aligned}
+\widehat{P}(\text{predictable}\mid +)&amp;=\frac{0+1}{9+20},\
+\widehat{P}(\text{no}\mid +)&amp;=\frac{0+1}{9+20},\
+\widehat{P}(\text{fun}\mid +)&amp;=\frac{1+1}{9+20}.
+\end{aligned}
+$$</p>
+<hr />
+<h2 id="49">分类（式 4.9）</h2>
+<p>对测试句 <span class="arithmatex">\(S=\)</span> “predictable no fun”，其似然为三词概率的乘积：
+$$
+P(S\mid c)=P(\text{predictable}\mid c)\,P(\text{no}\mid c)\,P(\text{fun}\mid c).
+$$</p>
+<p>带入先验并比较两类：
+$$
+\begin{aligned}
+\widehat{P}(-)\,P(S\mid -)
+&amp;=\frac{3}{5}\cdot\frac{2}{14+20}\cdot\frac{2}{14+20}\cdot\frac{1}{14+20}
+=\frac{3}{5}\cdot\frac{4}{34^3}\approx 6.1\times 10^{-5},\[6pt]
+\widehat{P}(+)\,P(S\mid +)
+&amp;=\frac{2}{5}\cdot\frac{1}{9+20}\cdot\frac{1}{9+20}\cdot\frac{2}{9+20}
+=\frac{2}{5}\cdot\frac{2}{29^3}\approx 3.2\times 10^{-5}.
+\end{aligned}
+$$</p>
+<p>因此 <span class="arithmatex">\(\widehat{P}(-)\,P(S\mid -)&gt;\widehat{P}(+)\,P(S\mid +)\)</span>，模型判为 <strong>负向（negative）</strong>。</p>
+<blockquote>
+<p>备注：文本分类中常见做法是在<strong>对数域</strong>累加对数概率以避免下溢；未登录词删除；是否使用停用词表对性能影响因任务而异。</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.progress"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../javascripts/katex.js"></script>
+      
+    
+  </body>
+</html>
